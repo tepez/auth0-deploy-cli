@@ -42,7 +42,7 @@ function getDatabase(folder, mappings) {
 
   // temp fix for https://github.com/auth0/auth0-deploy-cli/issues/63
   if (Object.keys(database.options.customScripts).length === 0) {
-    database.options.customScripts = null;
+    delete database.options.customScripts;
   }
 
   return database;
